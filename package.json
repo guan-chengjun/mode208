@@ -1,0 +1,33 @@
+{
+  "name": "twin-screw-extruder-sim",
+  "version": "1.0.0",
+  "description": "双螺杆挤出机 3D 动态仿真：基于 Three.js 原生能力，演示塑料输送、熔融、混炼、挤出全过程",
+  "main": "index.html",
+  "scripts": {
+    "start": "node tools/serve.mjs",
+    "build:models": "node tools/export-models.mjs",
+    "test:func": "node tools/cdp-func-test.mjs",
+    "test:rotation": "node tools/cdp-rot-test.mjs",
+    "test:screenshot": "node tools/cdp-scene-shots.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guan-chengjun/mode208.git"
+  },
+  "keywords": [
+    "threejs",
+    "extruder",
+    "simulation",
+    "particle-system",
+    "polymer-processing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guan-chengjun/mode208/issues"
+  },
+  "homepage": "https://github.com/guan-chengjun/mode208#readme",
+  "dependencies": {
+    "three": "^0.147.0"
+  }
+}

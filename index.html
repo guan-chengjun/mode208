@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>双螺杆挤出机 3D 动态仿真</title>
+  <link rel="stylesheet" href="src/style.css" />
+</head>
+<body>
+  <div id="app"></div>
+
+  <!-- 简洁控制面板：仅保留必要控件 -->
+  <div id="panel">
+    <h1>双螺杆挤出机原理演示</h1>
+    <div class="row">
+      <button id="btnToggle" class="primary">暂停</button>
+      <button id="btnReset">重置物料</button>
+    </div>
+    <div class="row slider-row">
+      <label for="rpm">螺杆转速</label>
+      <input id="rpm" type="range" min="10" max="150" step="5" value="60" />
+      <span id="rpmVal">60 rpm</span>
+    </div>
+    <div id="status">
+      状态：<b id="runState">运行中</b>
+      <span class="dot" id="stateDot"></span>
+    </div>
+    <div id="modelState">模型加载中…</div>
+  </div>
+
+  <div id="hint">左键拖拽旋转 · 滚轮缩放 · 右键平移</div>
+  <div id="legend">
+    <span><i class="sw" style="background:#d8b56b"></i>固体颗粒</span>
+    <span><i class="sw" style="background:#e07b39"></i>熔融软化</span>
+    <span><i class="sw" style="background:#c23a2b"></i>熔体挤出</span>
+  </div>
+
+  <!-- 本地 UMD 依赖，无需联网；r147 示例脚本挂载到全局 THREE -->
+  <script src="vendor/three.min.js"></script>
+  <script src="vendor/OrbitControls.js"></script>
+  <script src="vendor/GLTFLoader.js"></script>
+  <script src="src/machine-geometry.js"></script>
+  <script src="src/main.js"></script>
+</body>
+</html>
